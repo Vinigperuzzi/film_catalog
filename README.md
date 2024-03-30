@@ -46,3 +46,14 @@ This project marks my first venture into Ruby on Rails development, and I'm thor
 Contributions are welcome! If you have ideas for new features or improvements, feel free to submit a pull request.
 
 Enjoy exploring the world of cinema with the Movie Catalog project! 🍿🎥
+
+
+***
+
+# Screenshots
+
+![ScreenShot1](./app/assets/images/screeshots/ss1.png)
+
+![ScreenShot2](./app/assets/images/screeshots/ss2.png)
+
+![ScreenShot3](./app/assets/images/screeshots/ss3.png)
