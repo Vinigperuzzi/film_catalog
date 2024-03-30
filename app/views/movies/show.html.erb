@@ -1,0 +1,19 @@
+<h1><strong>Exibindo as informações de : <%= @movie.title %></strong></h1>
+
+<dt>
+  <dd><h2>Detalhes do filme</h2></dd>
+  <dl>Ano de lançamento: <%= @movie.release_date%></dl>
+  <dl>Sinopse: <%= @movie.sinopsis%></dl>
+  <dl>País de origem: <%= @movie.country%></dl>
+  <dl>Duração: <%= @movie.duration%> min.</dl>
+  <dl>Gênero: <%= MovieGenre.find(@movie.movie_genre_id).genre%></dl>
+  <dl>Diretor: <%= Director.find(@movie.director_id).name%></dl>
+</dt>
+
+<button><%= link_to 'Editar', edit_movie_path%></button>
+
+<% if flash[:notice] %>
+  <div class="flash-warning">
+    <%= flash[:notice] %>
+  </div>
+<%end%>

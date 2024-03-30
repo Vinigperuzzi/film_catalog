@@ -1,2 +1,13 @@
 <h1>Listagem dos filmes</h1>
 
+<dl>
+  <%@movies.each do |movie|%>
+    <p>
+      <strong>Filme: </strong><%= movie.title%> (<%= movie.release_date%>)
+      <div style="width: 10vw; display: flex;">
+        <button><%= link_to 'Ver mais', movie%></button>
+        <button><%= link_to 'Apagar', movie, data: {turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja apagar?'}%></button>
+      </div>
+    </p>
+  <%end%>
+</dl>

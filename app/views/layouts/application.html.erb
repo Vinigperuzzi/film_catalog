@@ -12,12 +12,16 @@
   </head>
 
   <body>
-    <nav style="display: flex;">
-      <button><%= link_to 'adicionar um novo gênero', new_movie_genre_path %></button>
-      <button><%= link_to 'Listar os gêneros', showall_movie_genres_path %></button>
+    <nav style="display: flex; justify-content: center; align-itens: center">
+      <div>
+        <button><%= link_to 'adicionar um novo gênero', new_movie_genre_path %></button>
+        <button><%= link_to 'listar os gêneros', showall_movie_genres_path %></button>
 
-      <button><%= link_to 'adicionar um novo diretor', new_director_path %></button>
-      <button><%= link_to 'Listar os diretores', showall_directors_path %></button>
+        <button><%= link_to 'adicionar um novo diretor', new_director_path %></button>
+        <button><%= link_to 'listar os diretores', showall_directors_path %></button>
+
+        <button><%= link_to 'cadastrar um novo filme', new_movie_path %></button>
+      </div>
     </nav>
 
 
