@@ -1,4 +1,4 @@
-<h1>Listagem dos filmes</h1>
+<h1>Mostrando os rascunhos</h1>
 
 <dl>
   <%@movies.each do |movie|%>
@@ -7,6 +7,7 @@
       <div style="width: 10vw; display: flex;">
         <button><%= link_to 'Ver mais', movie%></button>
         <button><%= link_to 'Apagar', movie, data: {turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja apagar?'}%></button>
+        <%= button_to 'Publicar', publish_movie_path(movie.id), {method: 'patch'}%>
       </div>
     </p>
   <%end%>

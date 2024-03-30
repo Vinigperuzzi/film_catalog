@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_30_135812) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_30_175716) do
   create_table "directors", force: :cascade do |t|
     t.string "name"
     t.string "nacionality"
@@ -37,6 +37,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_30_135812) do
     t.datetime "updated_at", null: false
     t.integer "director_id", null: false
     t.integer "movie_genre_id", default: 0, null: false
+    t.integer "status", default: 0
+    t.integer "movie_status", default: 0
     t.index ["director_id"], name: "index_movies_on_director_id"
     t.index ["movie_genre_id"], name: "index_movies_on_movie_genre_id"
   end

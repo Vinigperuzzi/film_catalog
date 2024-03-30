@@ -2,6 +2,14 @@
 
 <button><%= link_to 'Editar', edit_movie_genre_path%></button>
 
+<h2>Filmes do Gênero <%= @movie_genre.genre%></h2>
+
+<%@movies.each do |movie|%>
+  <p>
+    <strong>Filme: </strong><%= movie.title%> (<%= movie.release_date%>)
+  </p>
+<%end%>
+
 <% if flash[:notice] %>
   <div class="flash-warning">
     <%= flash[:notice] %>

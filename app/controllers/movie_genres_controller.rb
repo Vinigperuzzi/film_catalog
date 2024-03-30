@@ -6,6 +6,7 @@ class MovieGenresController < ApplicationController
 
   def show
     @movie_genre = MovieGenre.find(params[:id])
+    @movies = Movie.where(movie_genre_id: @movie_genre.id)
   end
 
   def new

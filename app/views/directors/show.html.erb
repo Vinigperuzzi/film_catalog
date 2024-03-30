@@ -1,6 +1,20 @@
 <h1><strong>Informações sobre o diretor <%= @director.name %></strong></h1>
 
+<dt>
+  <dl>Nacionalidade: <%= @director.nacionality%></dl>
+  <dl>Data de nascimento: <%= @director.birth_date%></dl>
+  <dl>Gênero Favorito: <%= MovieGenre.find(@director.movie_genre_id).genre%></dl>
+</dt>
+
 <button><%= link_to 'Editar', edit_director_path%></button>
+
+<h2>Filmes desse diretor</h2>
+
+<%@movies.each do |movie|%>
+  <p>
+    <strong>Filme: </strong><%= movie.title%> (<%= movie.release_date%>)
+  </p>
+<%end%>
 
 <% if flash[:notice] %>
   <div class="flash-warning">

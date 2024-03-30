@@ -11,6 +11,11 @@
 </dt>
 
 <button><%= link_to 'Editar', edit_movie_path%></button>
+<% if not @movie.published?%>
+  <%= button_to 'Publicar', publish_movie_path, {method: 'patch'}%>
+<% else %>
+  <%= button_to 'Tornar rascunho', publish_movie_path, {method: 'patch'}%>
+<% end %>
 
 <% if flash[:notice] %>
   <div class="flash-warning">

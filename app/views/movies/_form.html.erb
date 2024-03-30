@@ -13,5 +13,9 @@
   <%= f.collection_select :movie_genre_id, MovieGenre.all, :id, :genre %>
   <%= f.label :director, 'Diretor:' %>
   <%= f.collection_select :director_id, Director.all, :id, :name %>
+  <%= f.label :movie_status, 'Filme já lançado' %>
+  <%= f.check_box :movie_status %><br><br>
+  <%= f.label :status, 'Publicar' %>
+  <%= f.check_box :status %><br><br>
   <%= f.submit 'Salvar' %>
 <% end %>

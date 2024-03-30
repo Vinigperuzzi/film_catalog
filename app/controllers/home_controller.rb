@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.published
   end
 end
