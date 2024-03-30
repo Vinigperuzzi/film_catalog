@@ -1,0 +1,9 @@
+<h1><strong>Gênero: <%= @movie_genre.genre %></strong></h1>
+
+<button><%= link_to 'Editar', edit_movie_genre_path%></button>
+
+<% if flash[:notice] %>
+  <div class="flash-warning">
+    <%= flash[:notice] %>
+  </div>
+<%end%>

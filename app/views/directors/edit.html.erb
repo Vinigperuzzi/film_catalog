@@ -1,0 +1,19 @@
+<h1>Editar um novo gênero de filme</h1>
+
+<%= form_for @director do |f| %>
+  <%= f.label :name, 'Nome:' %>
+  <%= f.text_field :name %>
+  <%= f.label :nacionality, 'Nacionalidade:' %>
+  <%= f.text_field :nacionality %>
+  <%= f.label :birth_date, 'Data de nascimento:' %>
+  <%= f.text_field :birth_date %>
+  <%= f.label :movie_genre, 'Gênero favorito:' %>
+  <%= f.collection_select :movie_genre_id, MovieGenre.all, :id, :genre %>
+  <%= f.submit 'Editar' %>
+<% end %>
+
+<% if flash[:notice] %>
+  <div class="flash-warning">
+    <%= flash[:notice] %>
+  </div>
+<%end%>

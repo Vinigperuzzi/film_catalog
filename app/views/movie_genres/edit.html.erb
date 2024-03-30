@@ -1,0 +1,13 @@
+<h1>Editar um novo gênero de filme</h1>
+
+<%= form_for @movie_genre do |f| %>
+  <%= f.label :genre, 'Gênero:' %>
+  <%= f.text_field :genre %>
+  <%= f.submit 'Editar' %>
+
+<% end %>
+<% if flash[:notice] %>
+  <div class="flash-warning">
+    <%= flash[:notice] %>
+  </div>
+<%end%>

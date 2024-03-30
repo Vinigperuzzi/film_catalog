@@ -1,0 +1,13 @@
+<h1>Listando os gêneros</h1>
+
+<dl>
+  <%@movie_genres.each do |movie_genre|%>
+    <p>
+      <strong>Gênero: </strong><%= movie_genre.genre%>
+      <div style="width: 10vw; display: flex;">
+        <button><%= link_to 'Ver mais', movie_genre%></button>
+        <button><%= link_to 'Apagar', movie_genre, data: {turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja apagar?'}%></button>
+      </div>
+    </p>
+  <%end%>
+</dl>

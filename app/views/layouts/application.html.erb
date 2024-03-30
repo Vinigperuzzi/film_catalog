@@ -7,9 +7,25 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "global", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <nav style="display: flex;">
+      <button><%= link_to 'adicionar um novo gênero', new_movie_genre_path %></button>
+      <button><%= link_to 'Listar os gêneros', showall_movie_genres_path %></button>
+
+      <button><%= link_to 'adicionar um novo diretor', new_director_path %></button>
+      <button><%= link_to 'Listar os diretores', showall_directors_path %></button>
+    </nav>
+
+
     <%= yield %>
+
+
+    <footer>
+      <button><%= link_to 'back to home', root_path %></button>
+    </footer>
   </body>
 </html>
