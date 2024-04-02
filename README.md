@@ -35,6 +35,11 @@ Start the Rails server:
 
 Access the application in your web browser at [http://localhost:3000](http://localhost:3000).
 
+If the yours rails version is different, you can update your version with RVM or RBENV, or simply change the version in gemfile to match your version
+
+To discover which ruby version you have, you may run:
+```rails --version```
+
 ***
 
 # About This Project
