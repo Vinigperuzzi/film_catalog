@@ -62,3 +62,6 @@ Enjoy exploring the world of cinema with the Movie Catalog project! 🍿🎥
 ![ScreenShot2](./app/assets/images/screeshots/ss2.png)
 
 ![ScreenShot3](./app/assets/images/screeshots/ss3.png)
+
+Happy Coding! 
+### Vinigperuzzi 🧙‍♂️
