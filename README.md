@@ -25,20 +25,28 @@ Clone this repository to your local machine.
 Navigate to the project directory in your terminal.
 
 Run the following command to install dependencies:
-```bundle install```
+```term
+bundle install
+```
 
 Run the database migrations:
-```rails db:migrate```
+```term
+rails db:migrate
+```
 
 Start the Rails server:
-```rails server```
+```term
+rails server
+```
 
 Access the application in your web browser at [http://localhost:3000](http://localhost:3000).
 
 If your rails version is different from the specified, you can update your version with RVM or RBENV, or simply change the version in gemfile to match your version
 
 To discover which ruby version you have, you may run:
-```rails --version```
+```term
+rails --version
+```
 
 ***
 
