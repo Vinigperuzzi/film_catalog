@@ -9,6 +9,7 @@
   <dl>Gênero: <%= MovieGenre.find(@movie.movie_genre_id).genre%></dl>
   <dl>Diretor: <%= Director.find(@movie.director_id).name%></dl>
 </dt>
+<%= image_tag @movie.cover, height: 400 %>
 
 <button><%= link_to 'Editar', edit_movie_path%></button>
 <% if not @movie.published?%>
