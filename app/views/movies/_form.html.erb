@@ -17,5 +17,7 @@
   <%= f.check_box :movie_status %><br><br>
   <%= f.label :status, 'Publicar' %>
   <%= f.check_box :status %><br><br>
+  <%= f.label :cover %>
+  <%= f.file_field :cover %>
   <%= f.submit 'Salvar' %>
 <% end %>

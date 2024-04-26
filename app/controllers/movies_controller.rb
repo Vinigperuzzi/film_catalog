@@ -13,15 +13,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(title: params[:movie][:title],
-                        release_date: params[:movie][:release_date],
-                        sinopsis: params[:movie][:sinopsis],
-                        country: params[:movie][:country],
-                        duration: params[:movie][:duration],
-                        movie_genre_id: params[:movie][:movie_genre_id],
-                        director_id: params[:movie][:director_id]
-                      )
-    
+    @movie = Movie.new(get_params)
     if params[:movie][:movie_status] == "1"
       @movie.released!
     else
@@ -47,14 +39,7 @@ class MoviesController < ApplicationController
 
   def update
     @movie = Movie.find(params[:id])
-    if @movie.update(title: params[:movie][:title],
-                      release_date: params[:movie][:release_date],
-                      sinopsis: params[:movie][:sinopsis],
-                      country: params[:movie][:country],
-                      duration: params[:movie][:duration],
-                      movie_genre_id: params[:movie][:movie_genre_id],
-                      director_id: params[:movie][:director_id]
-                    )
+    if @movie.update(get_params)
       if params[:movie][:movie_status] == "1"
         @movie.released!
       else
@@ -87,5 +72,11 @@ class MoviesController < ApplicationController
       movie.published!
     end
     return redirect_to movie_path(movie.id)
+  end
+
+  private
+
+  def get_params
+    params.require(:movie).permit(:title, :release_date, :sinopsis, :country, :duration, :movie_genre_id, :director_id, :cover)
   end
 end
