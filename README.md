@@ -65,11 +65,15 @@ Enjoy exploring the world of cinema with the Movie Catalog project! 🍿🎥
 
 # Screenshots
 
-![ScreenShot1](./app/assets/images/screeshots/ss1.png)
+![ScreenShot1](./app/assets/images/screeshots/css1.png)
 
-![ScreenShot2](./app/assets/images/screeshots/ss2.png)
+![ScreenShot2](./app/assets/images/screeshots/css2.png)
 
-![ScreenShot3](./app/assets/images/screeshots/ss3.png)
+![ScreenShot3](./app/assets/images/screeshots/css3.png)
+
+![ScreenShot3](./app/assets/images/screeshots/css4.png)
+
+![ScreenShot3](./app/assets/images/screeshots/css5.png)
 
 Happy Coding! 
 ### Vinigperuzzi 🧙‍♂️

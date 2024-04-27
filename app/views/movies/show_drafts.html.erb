@@ -2,6 +2,9 @@
 
 <dl>
   <%@movies.each do |movie|%>
+    <% if movie.cover.attached? %>
+      <%= image_tag movie.cover, height: 200 %>
+    <% end %>
     <p>
       <strong>Filme: </strong><%= movie.title%> (<%= movie.release_date%>) [<%= movie.movie_status%>]
       <div style="width: 10vw; display: flex;">

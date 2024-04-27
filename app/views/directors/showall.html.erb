@@ -1,13 +1,15 @@
 <h1>Listando os diretores</h1>
 
-<dl>
-  <%@directors.each do |director|%>
-    <p>
-      <strong>Diretor: </strong><%= director.name%>
-      <div style="width: 10vw; display: flex;">
-        <button><%= link_to 'Ver mais', director%></button>
-        <button><%= link_to 'Apagar', director, data: {turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja apagar?'}%></button>
-      </div>
-    </p>
-  <%end%>
-</dl>
+<div class="movie-container">
+  <% @directors.each do |director| %>
+    <div class="movie-card">
+      <p>
+        <strong>Diretor: </strong><%= director.name %>
+        <div class="button-container">
+          <button><%= link_to 'Ver mais', director %></button>
+          <button><%= link_to 'Apagar', director, data: { turbo_method: :delete, turbo_confirm: 'Tem certeza que deseja apagar?' } %></button>
+        </div>
+      </p>
+    </div>
+  <% end %>
+</div>

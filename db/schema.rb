@@ -63,7 +63,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_26_181716) do
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "director_id", default: 0, null: false
+    t.integer "director_id", null: false
     t.integer "movie_genre_id", default: 0, null: false
     t.integer "status", default: 0
     t.integer "movie_status", default: 0
